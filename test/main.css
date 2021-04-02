@@ -1,0 +1,44 @@
+.container {
+    margin: 20px;
+    display: grid;
+    height: 100px;
+    grid-template-columns: repeat(4, 25%);
+    /* grid-template-rows: 5rem minmax(10px, 200px) 100px; */
+    grid-template-rows: [rreshti-1] 200px[rreshti-2] minmax(50px, 300px) [rreshti-3] 200px [rreshti-4];
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas: "header header header header"
+                         "side side main main"
+                         "footer footer footer footer";
+
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+    /* grid-column-start: 2;
+    grid-column-end: 4; */
+    grid-area: header;
+
+
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+    grid-area: side;
+
+}
+
+.el3 {
+    background: rgba(0, 128, 0, 0.5);
+    grid-area: main;
+
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+    grid-area: footer;
+    
+}
+ul li {
+    
+}

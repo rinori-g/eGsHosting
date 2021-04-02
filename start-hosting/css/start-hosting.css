@@ -1,0 +1,135 @@
+main {
+    height: 100vh;
+}
+
+  .banner-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.banner-photo img {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+} 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.178);
+    z-index: 0;
+    
+}
+.contact-form,
+.login-form {
+    position: relative;
+    width: 100%;
+    padding: 150px 0;
+}
+.contact-banner,
+.login-banner {
+    position: relative;
+    width: 400px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.658);
+    padding: 13px 50px;
+    margin: auto;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.432);
+    z-index: 0;
+
+}
+.form-title {
+    text-align: center;
+    font-size: 30px;
+}
+.contact-banner::after {
+    position: absolute;
+    left: 38%;
+    top: 15.5%;
+    content: '';
+    height: 3px;
+    width: 24%;
+    background-color: white;
+}
+.login-banner::after {
+    position: absolute;
+    left: 40%;
+    top: 21%;
+    content: "";
+    background-color: white;
+    height: 3px;
+    width: 20%;
+}
+.contact-banner input,
+.login-banner input {
+    width: 100%;
+    padding: 5px 20px;
+    margin: 15px 0;
+    border: 2px solid rgba(250, 250, 250, 0.397);
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s;
+    
+}
+.contact-banner input:hover,
+.login-banner input:hover,
+.contact-banner input:focus,
+.login-banner input:focus {
+    border: 2px solid rgb(248, 248, 248);
+
+}
+
+
+
+.contact-banner button,
+.login-banner button {
+
+    padding: 6px 25px;
+    margin: 10px 0;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: transparent;
+    color: white;
+}
+::placeholder {
+    color: rgb(212, 211, 211);
+}
+.contact-banner button:hover,
+.login-banner button:hover {
+    background-color: white;
+    border: 2px solid transparent;
+    color: rgb(0, 0, 0);
+}
+.login-text {
+    text-align: center;
+}
+
+ .login-a {
+    color: white;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+.login-a:hover {
+    text-decoration: none;
+
+}
+

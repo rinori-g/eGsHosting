@@ -1,0 +1,100 @@
+
+/* Mobile nav button */
+
+.toggle-button {
+    display: none;
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+}
+  
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+  .toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: rgb(216, 215, 215);
+    display: block;
+    margin: 0.6rem 0;
+  }
+  
+
+
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background-color: rgba(19, 19, 19, 0.822);
+    height: 100vh;
+    width: 70vw;
+}
+.mobile-items {
+    height: 100%;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.mobile-item {
+    padding: 1.5rem 0;
+}
+.mobile-item a {
+    text-decoration: none;
+    color: white;
+}
+.closebutton  {
+    position: absolute;
+    left: 90%;
+    top: 8%;
+}
+.closebutton button {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 2.5rem;
+    color: rgb(180, 179, 179);
+    text-decoration: none;
+    cursor: pointer;
+}
+.closebutton button:hover {
+    color: white;
+}
+.mobile-item a:hover,
+.mobile-item a:active {
+    border-bottom: 3px solid white;
+}
+.mobile-button a {
+    padding: 10px 22px;
+    background-color: white;
+    border: 2px solid white;
+    color: rgb(46, 46, 46);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Noto Sans JP', sans-serif;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.mobile-button a:hover,
+.mobile-button a:active {
+    border: 2px solid white;
+    transition: all 0.3s;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+
+}

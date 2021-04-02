@@ -1,0 +1,495 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+body {
+    min-height: 200vh;
+    margin: 0;
+}
+.backdrop {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    padding: 15px 50px;
+    z-index: 2;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-header-brand img {
+    height: 3.2rem;
+    vertical-align: middle;
+}
+
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 16px;
+    font-size: 17px;
+}
+.nav-item a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.nav-items li::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3.5px;
+    width: 0px;
+    background: transparent;
+    transition: 0.3s all;
+}
+.nav-items li:hover::after,
+.mobile-nav__items li:hover::after {
+    width: 100%;
+    background-color: white;
+    transition: 0.3s all;
+    
+}
+  
+.nav-items .button-a::after {
+    height: 0;
+}
+
+.nav-item-button {
+    padding: 10px 22px;
+    background-color: white;
+    border: 2px solid white;
+    color: rgb(46, 46, 46);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Noto Sans JP', sans-serif;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.nav-item-button:hover,
+.nav-item-button:active {
+    border: 2px solid white;
+    transition: all 0.3s;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+}
+
+
+/* banner section */
+
+#banner {
+    position: relative;
+    background: url("../images/banner0.jpg") no-repeat;
+    background-size: cover;
+    background-position: 85% 15%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+
+}
+.home-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(41, 41, 41, 0.425);
+    z-index: 1;
+    
+}
+
+.banner-header,
+.banner-header2,
+.banner-text,
+.about_button {
+    position: absolute;
+    left: 10%;
+    text-align: justify;
+    z-index: 1;
+    
+}
+.banner-header  {
+    top: 40%;
+    color: white;
+    font-size: 55px;
+    font-weight: 400;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    
+}
+/* .banner-header2 {
+    display: none;
+    top: 50%;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-weight: 300;
+     background-color: rgba(255, 255, 255, 0.082);
+    border: 2px solid rgba(243, 243, 243, 0.055); 
+} */
+.banner-text {
+    top: 55%;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    
+}
+
+.about_button {
+    top: 62%;
+    padding: 8px 25px;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: black;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+    transform: scale(1.05);
+}
+.about_button:hover {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    transform: scale(1.1);
+
+
+}
+.banner-scroll {
+    position: absolute;
+    top: 15%;
+}
+#plans {
+    padding: 60px 10px;
+    position: relative;
+}
+.plans-list {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plans-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background: url("../images/pexels-tirachard-kumtanom-733857.jpg") no-repeat; */
+    background-image: linear-gradient( #88c0da 20%, #60b4db 50%, #9adfff 70%);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.section-title {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.534);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
+    width: 30%;
+    border: 5px solid rgba(0, 0, 0, 0.089);
+    border-radius: 5px;
+    color: rgb(207, 206, 206);
+    box-shadow: 2px 0px 6px 2px rgba(0, 0, 0, 0.5);
+}
+.highlighted {
+    background-color: rgba(46, 46, 46, 0.6);
+    color: white;
+
+}
+.plan-text-highlighted {
+    padding: 8px;
+    color: rgba(255, 255, 255, 0.836);
+    box-shadow: inset 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-size: 20px;
+    width: 200px;
+    margin: 0 auto;
+}
+.plan h3 {
+    color: white
+}
+.plan ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.plan ul li {
+    /* padding: 5px 0; */
+    margin: 10px 0;
+}
+.plan-title {
+    color: rgb(161, 235, 235);
+    font-size: 25px;
+}
+.plan-price {
+    color: rgb(133, 197, 133);
+}
+.plan-button {
+    padding: 10px 22px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.plan-button:hover {
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(67, 67, 68);
+
+}
+.plan-button-highlighed {
+    color: rgb(46, 46, 46);
+}
+
+#core-features {
+    position: relative;
+    padding: 50px;
+    background-color: rgba(118, 125, 230, 0.288);
+}
+.core-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index: -1;
+}
+.core-bg {
+    background: url("../images/core-bg2.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+#core-features .section-title {
+    color: white;
+    padding-bottom: 50px;
+}
+.core-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+.core-element {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+.circle-image {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(43, 42, 42, 0.5);
+    border-radius: 50%;
+    border: 5px solid white;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.core-description {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+#main-footer {
+    position: relative;
+    background-color: rgba(27, 26, 26, 0.815);
+    padding: 1.5rem;
+    padding-bottom: 0.6rem;
+
+}
+.footer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/pexels-pixabay-268533.jpg") no-repeat;
+    background-size: cover;
+
+    z-index: -1;
+
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.social-media ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+.social-media ul li {
+    margin: 0 20px;
+    list-style: none;
+    font-size: 18px;
+}
+.footer-element {
+    margin: 0 16px;
+    font-size: 15px;
+}
+.footer-element a {
+    color: rgb(179, 179, 179);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-element a:hover,
+.footer-element a:active {
+    color: white;
+    transition: all 0.3s;
+
+}
+
+
+
+
+.social-media i {
+    color: rgb(179, 179, 179);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.social-media .fa-facebook:hover,
+.social-media .fa-facebook:active {
+    color: rgb(72, 119, 182);
+    transition: all 0.3s;
+}
+.social-media .fa-instagram:hover,
+.social-media .fa-instagram:active {
+    color: rgb(197, 52, 125);
+    transition: all 0.3s;
+}
+.social-media .fa-twitter:hover,
+.social-media .fa-twitter:active {
+    color: rgb(8, 184, 243);
+    transition: all 0.3s;
+}
+.social-media .fa-google:hover,
+.social-media .fa-google:active {
+    color: rgb(109, 31, 11);
+    transition: all 0.3s;
+}
+.copyright {
+    padding-top: 50px;
+    text-align: center;
+    color: rgb(179, 179, 179);
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    z-index: 200;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    background: rgba(53, 53, 53, 0.95);
+    padding: 5rem;
+    border: 2px solid rgb(230, 230, 230);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+  
+  .modal__title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: white;
+  }
+  
+  .modal__actions {
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  .modal__action {
+    border: 2px solid white;
+    background: #0e4f1f;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .modal__action:hover,
+  .modal__action:active {
+    background: #2ddf5c;
+    border-color: #2ddf5c;
+  }
+  
+  .modal__action--negative {
+    background: red;
+    border-color: white;
+  }
+  
+  .modal__action--negative:hover,
+  .modal__action--negative:active {
+    background: #ff5454;
+    border-color: #ff5454;
+  }

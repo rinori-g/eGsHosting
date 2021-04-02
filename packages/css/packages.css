@@ -1,0 +1,113 @@
+.packages-bg {
+    background: url("../../assets/images/packages-bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.356);
+    z-index: -1;
+    
+  }
+  
+
+main {
+    padding-top: 10rem;
+    padding-bottom: 2.5rem;
+    /* margin-top: 3.125rem; */
+}
+#plan-section {
+    width: 50%;
+    margin: 1rem 0;
+    background-color: rgba(0,0,0,0.7);
+    border: 4px solid rgb(77, 77, 77);
+    border-left: none;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+#plan-section:hover,
+#plan-section:active {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    /* border-color: rgb(255, 255, 255) !important; */
+    transition: all 0.3s;
+}
+#plan-section a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 2rem;
+}
+.plan-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    font-size: 1.0rem;
+    background-color: rgb(30, 159, 245);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px rgba(145, 144, 144, 0.89);
+    z-index: 0;
+    padding: 0.5rem;
+    
+}
+
+.plan-subtitle {
+    color: rgb(221, 221, 221);
+}
+.plan-description {
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: rgb(31, 31, 31);
+    background-color: white;
+}
+.plus:hover {
+    border: 4px solid rgb(30, 159, 245) !important;
+    border-left: none !important;
+
+}
+.free {
+    float: right;
+    border-right: none !important;
+    border-left: 4px solid rgb(77, 77, 77) !important;
+
+}
+.free:hover {
+    border: 4px solid rgb(235, 118, 22) !important;
+    border-right: none !important;
+}
+.clearfix {
+    clear: both;
+}
+.premium:hover {
+    border: 4px solid rgb(107, 204, 107) !important;
+    border-left: none !important;
+    
+}
+.plus .plan-title {
+    color: rgb(0, 162, 255);
+}
+.free .plan-title {
+    color: rgb(235, 118, 22);
+}
+.premium .plan-title {
+    color: rgb(107, 204, 107);
+}
+.plus .plan-description {
+    border: 2px solid rgb(0, 162, 255);
+}
+.free .plan-description {
+    border: 2px solid rgb(235, 118, 22);
+}
+.premium .plan-description {
+    border: 2px solid rgb(107, 204, 107);
+}
